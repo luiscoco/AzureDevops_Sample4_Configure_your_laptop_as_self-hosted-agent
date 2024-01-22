@@ -50,7 +50,7 @@ Store it securely; you won’t be able to see it again
 
 ![image](https://github.com/luiscoco/AzureDevops_Sample4_Configure_your_laptop_as_self-hosted-agent/assets/32194879/50e81727-96f9-41e6-9e24-2eb8cc34be84)
 
-## 3. Download and Configure the Agent
+## 3. Download, Configure and Run the Agent
 
 In Azure DevOps, we go to **Project settings > Agent pools**
 
@@ -100,14 +100,7 @@ We can also see the above command in the Azure DevOps instructions to set up the
 
 ![image](https://github.com/luiscoco/AzureDevops_Sample4_Configure_your_laptop_as_self-hosted-agent/assets/32194879/054289e5-9342-4d81-8aaa-f1d11b072953)
 
-
-## 4. Run the Agent
-
-After configuring, start the agent. On Linux/macOS, use ./svc.sh install and ./svc.sh start. On Windows, run .\svc.cmd install followed by .\svc.cmd start.
-
-The agent should now be online and appear in the Azure DevOps agent pool.
-
-## 5. Use the Self-hosted Agent in Your Pipelines
+## 4. Use the Self-hosted Agent in Your Pipelines
 
 When defining a pipeline (YAML or through the UI), specify the pool where your self-hosted agent resides:
 
@@ -116,9 +109,65 @@ pool:
   name: MyPool # Replace with your agent pool name
 ```
 
+For example in our case we created a Default agent:
+
+```
+pool:
+  name: 'Default'
+```
+
+In our case see the Azure DevOps Pipeline configuration yaml file:
+
+```yaml
+trigger:
+- main
+
+# Modificar aquí para usar un agente autohospedado
+pool:
+  name: 'Default' # Asegúrate de que este sea el nombre de tu grupo de agentes autohospedados
+
+variables:
+  solution: '**/*.sln'
+  buildPlatform: 'Any CPU'
+  buildConfiguration: 'Release'
+
+steps:
+- task: UseDotNet@2
+  inputs:
+    version: '8.x'
+    packageType: 'sdk'
+
+- task: DotNetCoreCLI@2
+  inputs:
+    command: 'restore'
+    projects: '**/*.csproj'
+    feedsToUse: 'select'
+
+- task: DotNetCoreCLI@2
+  inputs:
+    command: 'build'
+    projects: '**/*.csproj'
+    arguments: '--configuration $(buildConfiguration)'
+
+# Optional: Add steps for running tests here
+
+- task: DotNetCoreCLI@2
+  inputs:
+    command: 'publish'
+    publishWebProjects: true
+    arguments: '--configuration $(buildConfiguration) --output $(Build.ArtifactStagingDirectory)'
+    zipAfterPublish: true
+
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    ArtifactName: 'drop'
+    publishLocation: 'Container'
+```
+
 Your jobs will now run on your self-hosted agent.
 
-## 6. Verify the Job successfully run
+## 5. Verify the Job successfully run
 
 ![image](https://github.com/luiscoco/AzureDevops_Sample4_Configure_your_laptop_as_self-hosted-agent/assets/32194879/a4ec4763-95c9-4781-b021-170c52f3cd30)
 
