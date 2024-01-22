@@ -10,6 +10,39 @@ This approach gives you **more control over the environment** in which your jobs
 
 Here’s a step-by-step guide to setting up **self-hosted agents** in **Azure DevOps**:
 
+1. Prepare the Machine
+Ensure your target machine meets the requirements:
+
+Supported operating system (Windows, macOS, Linux)
+Sufficient hardware resources (CPU, memory, disk space)
+Network connectivity to Azure DevOps services
+Required software installed (e.g., development tools, SDKs)
+2. Create a Personal Access Token (PAT) in Azure DevOps
+You’ll need a PAT to authenticate the agent with Azure DevOps:
+
+Sign in to your Azure DevOps organization.
+Go to User settings > Personal access tokens.
+Click New Token.
+Give it a descriptive name, choose an expiration, and select the Agent Pools (read, manage) scope under Agent Pools.
+Click Create and copy the token. Store it securely; you won’t be able to see it again.
+3. Download and Configure the Agent
+In Azure DevOps, go to Project settings > Agent pools.
+Choose the default pool or create a new one.
+Click New agent and select the operating system of your target machine.
+Follow the instructions to download the agent package.
+On your target machine, extract the agent package and open a command line in the extracted directory.
+Run the configuration script (e.g., ./config.sh on Linux/macOS, .\config.cmd on Windows), and when prompted, enter the URL of your Azure DevOps organization and the PAT you created earlier.
+4. Run the Agent
+After configuring, start the agent. On Linux/macOS, use ./svc.sh install and ./svc.sh start. On Windows, run .\svc.cmd install followed by .\svc.cmd start.
+The agent should now be online and appear in the Azure DevOps agent pool.
+5. Use the Self-hosted Agent in Your Pipelines
+When defining a pipeline (YAML or through the UI), specify the pool where your self-hosted agent resides:
+yaml
+Copy code
+pool:
+  name: MyPool # Replace with your agent pool name
+Your jobs will now run on your self-hosted agent.
+
 
 ![image](https://github.com/luiscoco/AzureDevops_Sample4_Configure_your_laptop_as_self-hosted-agent/assets/32194879/a4ec4763-95c9-4781-b021-170c52f3cd30)
 
