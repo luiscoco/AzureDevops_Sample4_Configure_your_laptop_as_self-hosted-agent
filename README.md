@@ -3,7 +3,7 @@
 
 
 
-
+![image](https://github.com/luiscoco/AzureDevops_Sample4_Configure_your_laptop_as_self-hosted-agent/assets/32194879/a4ec4763-95c9-4781-b021-170c52f3cd30)
 
 ![image](https://github.com/luiscoco/AzureDevops_Sample4_Configure_your_laptop_as_self-hosted-agent/assets/32194879/c959f291-9b39-4cbe-815c-bf6ede5c2892)
 
