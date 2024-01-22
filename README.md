@@ -72,6 +72,12 @@ We run PowerShell and we execute the following commands:
 PS C:\> mkdir agent ; cd agent
 ```
 
+We move the downloaded agent ZIP file from the **Downloads** folder to the in the **agent** directory
+
+![image](https://github.com/luiscoco/AzureDevops_Sample4_Configure_your_laptop_as_self-hosted-agent/assets/32194879/48cb735a-acc7-4214-97e2-b6a3f70dce69)
+
+We create the agent from the ZIP file
+
 ```
 PS C:\agent> Add-Type -AssemblyName System.IO.Compression.FileSystem ; [System.IO.Compression.ZipFile]::ExtractToDirectory("$HOME\Downloads\vsts-agent-win-x64-3.232.3.zip", "$PWD")
 ```
