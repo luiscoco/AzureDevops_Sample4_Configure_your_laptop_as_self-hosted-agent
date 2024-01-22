@@ -60,8 +60,11 @@ We choose the **default pool** or we create a new one
 
 We click **New agent** and we select the operating system of your target machine
 
+![image](https://github.com/luiscoco/AzureDevops_Sample4_Configure_your_laptop_as_self-hosted-agent/assets/32194879/f856b1f7-92ed-4cf9-91a9-6800afeb5a3f)
 
-Follow the instructions to download the agent package.
+We have to follow the instructions to **download the agent package**
+
+
 
 On your target machine, extract the agent package and open a command line in the extracted directory.
 
