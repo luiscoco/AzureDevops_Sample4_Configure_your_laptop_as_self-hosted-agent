@@ -64,9 +64,9 @@ We click **New agent** and we select the operating system of your target machine
 
 We have to follow the instructions to **download the agent package**, **configure** and **run** it
 
-![image](https://github.com/luiscoco/AzureDevops_Sample4_Configure_your_laptop_as_self-hosted-agent/assets/32194879/aab84909-a9a3-44cd-894a-196cbb3d9c13)
-
 ![image](https://github.com/luiscoco/AzureDevops_Sample4_Configure_your_laptop_as_self-hosted-agent/assets/32194879/d87a5a6e-12e6-4b1d-bf3d-1f9f3e317f78)
+
+![image](https://github.com/luiscoco/AzureDevops_Sample4_Configure_your_laptop_as_self-hosted-agent/assets/32194879/054289e5-9342-4d81-8aaa-f1d11b072953)
 
 We run PowerShell and we execute the following commands:
 
@@ -102,7 +102,7 @@ PS C:\agent> .\config.cmd
 PS C:\agent> .\run.cmd
 ```
 
-![image](https://github.com/luiscoco/AzureDevops_Sample4_Configure_your_laptop_as_self-hosted-agent/assets/32194879/054289e5-9342-4d81-8aaa-f1d11b072953)
+![image](https://github.com/luiscoco/AzureDevops_Sample4_Configure_your_laptop_as_self-hosted-agent/assets/32194879/aab84909-a9a3-44cd-894a-196cbb3d9c13)
 
 ## 4. Use the Self-hosted Agent in Your Pipelines
 
