@@ -52,6 +52,8 @@ Store it securely; you won’t be able to see it again
 
 ## 3. Download, Configure and Run the Agent
 
+## 3.1. We create a Default Agent pool
+
 In Azure DevOps, we go to **Project settings > Agent pools**
 
 We choose the **default pool** or we create a new one
@@ -62,7 +64,7 @@ We click **New agent** and we select the operating system of your target machine
 
 ![image](https://github.com/luiscoco/AzureDevops_Sample4_Configure_your_laptop_as_self-hosted-agent/assets/32194879/f856b1f7-92ed-4cf9-91a9-6800afeb5a3f)
 
-We have to follow the instructions to **download the agent package**, **configure** and **run** it
+## 3.2. We download the agent package
 
 ![image](https://github.com/luiscoco/AzureDevops_Sample4_Configure_your_laptop_as_self-hosted-agent/assets/32194879/d87a5a6e-12e6-4b1d-bf3d-1f9f3e317f78)
 
@@ -70,7 +72,7 @@ We have to follow the instructions to **download the agent package**, **configur
 
 We run PowerShell and we execute the following commands:
 
-**Create the agent**
+## 3.3. We create the agent
 
 ```
 PS C:\> mkdir agent ; cd agent
@@ -88,7 +90,7 @@ PS C:\agent> Add-Type -AssemblyName System.IO.Compression.FileSystem ; [System.I
 
 ![image](https://github.com/luiscoco/AzureDevops_Sample4_Configure_your_laptop_as_self-hosted-agent/assets/32194879/890cf46f-6ce0-437c-943e-902f3c7ace37)
 
-**Configure the agentDetailed instructions**
+## 3.4. We configure the agent
 
 ```
 PS C:\agent> .\config.cmd
@@ -96,7 +98,7 @@ PS C:\agent> .\config.cmd
 
 ![image](https://github.com/luiscoco/AzureDevops_Sample4_Configure_your_laptop_as_self-hosted-agent/assets/32194879/499eb45a-f5cf-49ce-9b59-f8242bc9d7ee)
 
-**Run the agent interactively**
+## 3.5. We run the agent
 
 ```
 PS C:\agent> .\run.cmd
