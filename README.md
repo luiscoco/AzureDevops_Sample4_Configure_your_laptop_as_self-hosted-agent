@@ -64,11 +64,42 @@ We click **New agent** and we select the operating system of your target machine
 
 We have to follow the instructions to **download the agent package**
 
+We run PowerShell and we execute the following commands:
 
+**Create the agent**
 
-On your target machine, extract the agent package and open a command line in the extracted directory.
+```
+PS C:\> mkdir agent ; cd agent
+```
 
-Run the configuration script (e.g., ./config.sh on Linux/macOS, .\config.cmd on Windows), and when prompted, enter the URL of your Azure DevOps organization and the PAT you created earlier.
+```
+PS C:\agent> Add-Type -AssemblyName System.IO.Compression.FileSystem ; [System.IO.Compression.ZipFile]::ExtractToDirectory("$HOME\Downloads\vsts-agent-win-x64-3.232.3.zip", "$PWD")
+```
+
+![image](https://github.com/luiscoco/AzureDevops_Sample4_Configure_your_laptop_as_self-hosted-agent/assets/32194879/890cf46f-6ce0-437c-943e-902f3c7ace37)
+
+**Configure the agentDetailed instructions**
+
+```
+PS C:\agent> .\config.cmd
+```
+
+![image](https://github.com/luiscoco/AzureDevops_Sample4_Configure_your_laptop_as_self-hosted-agent/assets/32194879/499eb45a-f5cf-49ce-9b59-f8242bc9d7ee)
+
+**Run the agent interactively**
+
+```
+PS C:\agent> .\run.cmd
+```
+
+We can also see the above command in the Azure DevOps instructions to set up the agent
+
+![image](https://github.com/luiscoco/AzureDevops_Sample4_Configure_your_laptop_as_self-hosted-agent/assets/32194879/aab84909-a9a3-44cd-894a-196cbb3d9c13)
+
+![image](https://github.com/luiscoco/AzureDevops_Sample4_Configure_your_laptop_as_self-hosted-agent/assets/32194879/d87a5a6e-12e6-4b1d-bf3d-1f9f3e317f78)
+
+![image](https://github.com/luiscoco/AzureDevops_Sample4_Configure_your_laptop_as_self-hosted-agent/assets/32194879/054289e5-9342-4d81-8aaa-f1d11b072953)
+
 
 ## 4. Run the Agent
 
