@@ -24,17 +24,27 @@ Required software installed (e.g., development tools, SDKs)
 
 ## 2. Create a Personal Access Token (PAT) in Azure DevOps
 
-You’ll need a PAT to authenticate the agent with Azure DevOps:
+You’ll need a **PAT** to authenticate the agent with Azure DevOps:
 
-Sign in to your Azure DevOps organization.
+We **Sign in** to your Azure DevOps organization
 
-Go to User settings > Personal access tokens.
+We go to **User settings -> Personal access tokens**
 
-Click New Token.
+![image](https://github.com/luiscoco/AzureDevops_Sample4_Configure_your_laptop_as_self-hosted-agent/assets/32194879/b39a75f7-6e53-4cfa-9456-7abea6d19df6)
 
-Give it a descriptive name, choose an expiration, and select the Agent Pools (read, manage) scope under Agent Pools.
+We click **New Token**
 
-Click Create and copy the token. Store it securely; you won’t be able to see it again.
+![image](https://github.com/luiscoco/AzureDevops_Sample4_Configure_your_laptop_as_self-hosted-agent/assets/32194879/2b9e192e-758a-4c32-9c38-b2ce7e95bfd5)
+
+We give it a descriptive **name**, choose an **expiration**, and select the **Agent Pools (read, manage)** scope under Agent Pools
+
+
+
+We click **Create** and copy the token. 
+
+Store it securely; you won’t be able to see it again
+
+
 
 ## 3. Download and Configure the Agent
 
