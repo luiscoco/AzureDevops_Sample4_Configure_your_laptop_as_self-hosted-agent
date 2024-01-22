@@ -48,15 +48,18 @@ Then we click **Create** and copy the token
 
 Store it securely; you won’t be able to see it again
 
-
+![image](https://github.com/luiscoco/AzureDevops_Sample4_Configure_your_laptop_as_self-hosted-agent/assets/32194879/50e81727-96f9-41e6-9e24-2eb8cc34be84)
 
 ## 3. Download and Configure the Agent
 
-In Azure DevOps, go to Project settings > Agent pools.
+In Azure DevOps, we go to **Project settings > Agent pools**
 
-Choose the default pool or create a new one.
+We choose the **default pool** or we create a new one
 
-Click New agent and select the operating system of your target machine.
+![image](https://github.com/luiscoco/AzureDevops_Sample4_Configure_your_laptop_as_self-hosted-agent/assets/32194879/a7319621-1ef8-4d6e-bc8d-1944c9aaaa9c)
+
+We click **New agent** and we select the operating system of your target machine
+
 
 Follow the instructions to download the agent package.
 
