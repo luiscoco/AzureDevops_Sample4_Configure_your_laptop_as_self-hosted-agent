@@ -169,11 +169,7 @@ We create a New Pipeline
 
 ![image](https://github.com/luiscoco/AzureDevops_Sample4_Configure_your_laptop_as_self-hosted-agent/assets/32194879/9340902f-7d63-4d8c-84c3-52fb615fbb1c)
 
-We input the above yaml file source code to define the pipeline
-
-![image](https://github.com/luiscoco/AzureDevops_Sample4_Configure_your_laptop_as_self-hosted-agent/assets/32194879/121303f0-d0b6-4927-9139-c2b573fa47f0)
-
-Finally, we **Run the pipeline**
+We input the above **yml file source code** to configure the pipeline and we **Run the pipeline**
 
 ![image](https://github.com/luiscoco/AzureDevops_Sample4_Configure_your_laptop_as_self-hosted-agent/assets/32194879/77d44e54-07bf-4614-bdcd-9434bb2ed2a1)
 
