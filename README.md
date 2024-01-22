@@ -38,9 +38,13 @@ We click **New Token**
 
 We give it a descriptive **name**, choose an **expiration**, and select the **Agent Pools (read, manage)** scope under Agent Pools
 
+We press on **Show all scopes** link and we select **Agent Pools (read, manage)**
 
+![image](https://github.com/luiscoco/AzureDevops_Sample4_Configure_your_laptop_as_self-hosted-agent/assets/32194879/afe2560a-fc00-4006-8012-3c47232861e0)
 
-We click **Create** and copy the token. 
+Then we click **Create** and copy the token
+
+![image](https://github.com/luiscoco/AzureDevops_Sample4_Configure_your_laptop_as_self-hosted-agent/assets/32194879/5b1e8ff8-d64e-4e02-bbed-1e5af547c3b9)
 
 Store it securely; you won’t be able to see it again
 
